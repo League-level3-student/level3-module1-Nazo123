@@ -17,7 +17,7 @@ private int[] array;
 		int[] arra = new int[array.length+1];
 		//B. set the last element of your new array to 
 		//   the value passed into the method
-		arra[arra.length] = v;
+		arra[arra.length-1] = v;
 		//C. iterate through the member array and 
 		//   copy every element from the member array 
 		//   to the new array
@@ -55,7 +55,7 @@ private int[] array;
 		for (int i = 0; i < arra.length;i++) {
 			//C. if i is less than location:
 		    //		set the element at i of the new array to the element at i of the member array
-			if (i-1 == location) {
+			if (i < location) {
 				arra[i] = array[i];
 			}
 			else if(i>location) {
@@ -80,9 +80,16 @@ private int[] array;
 	//9. Complete the steps in the remove method
 	public void remove(int location) {
 		//A. create a new array that is one element smaller than the member array
-		
+		int arra[] = new int[array.length-1];
 		//B. make a for loop to iterate through the member array
-		
+		for (int i = 0; i < array.length;i++) {
+			if (i<location) {
+				arra[i] = array[i];
+			}
+			else if(i>location) {
+				arra[i-1] = array[i];
+			}
+		}
 			//C. if i  is less than location
 			//		set the element at i of the new array to the element at i of the member array
 			
@@ -92,6 +99,7 @@ private int[] array;
 			//E. else, continue;
 			
 		//F. set the member array equal to the new array
+		array = arra;
 	}
 	
 	//10. Run the tests again the see if you are correct so far
