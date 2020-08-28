@@ -1,5 +1,10 @@
 package _03_IntroToStacks;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 public class _02_TextUndoRedo {
 	/* 
 	 * Create a JFrame with a JPanel and a JLabel.
@@ -13,6 +18,14 @@ public class _02_TextUndoRedo {
 	 * off the Stack and added back to the JLabel.
 	 * 
 	 * */
+	public static void main(String[] args) {
+		
+		TextMachine e = new TextMachine();
+		e.Run();
+	}
+
+		
+		
 	
 	
 }
