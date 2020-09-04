@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import javafx.scene.input.KeyCode;
+
 
 public class TextMachine implements KeyListener {
  JFrame frame = new JFrame();
